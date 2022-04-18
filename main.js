@@ -96,6 +96,7 @@ function createPrintWindow() {
   /* 跨进程通信事件 */
   // 开始执行打印任务
   ipcMain.on('printTask', (e, ...args) => {
+    const {printer} = args[0];
     deviceName = printer || '';
 
     printWindow.send('setPrintParams', args[0]);

@@ -5,7 +5,7 @@ interface Path {
 const path: Path = {
   index: '/', // 主进程控制页面
 
-  printDeliveryLabel: '/print', // 打印渲染页
+  print: '/print', // 打印渲染页
 };
 
 export default path;

@@ -64,7 +64,9 @@ const OrderListPage: FC = () => {
     const ipc = (window as any).electron.ipcRenderer;
 
     // 开始打印
-    ipc.send('printTask', {});
+    ipc.send('printTask', {
+      printer: localStorage.printer,
+    });
 
     // 监听打印完成
     ipc.removeAllListeners('onPrintSuccess');

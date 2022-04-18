@@ -57,6 +57,7 @@ const PrintDeliveryLabel: FC = () => {
     ipc.on('printComplete', async () => {
       await Utils.wait(1000);
       setRendingStatus(RenderingStatus.preparing);
+      ipc.send('onPrintSuccess');
     });
   };
 
