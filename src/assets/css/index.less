@@ -1,0 +1,34 @@
+@import 'antd/dist/antd.less';
+@import './reset.less';
+
+.block{
+  display: block;
+}
+.hidden{
+  display: hidden;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.center{
+  text-align: center;
+}
+
+/* 1行省略号 */
+.line-clamp-1 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+/* 最多显示2行 */
+.line-clamp-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
